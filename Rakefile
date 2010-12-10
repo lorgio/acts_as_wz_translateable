@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "acts_as_wz_translateable"
   gem.homepage = "http://github.com/lorgio/acts_as_wz_translateable"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Adds I18n translations to a model}
+  gem.description = %Q{Provides translations for specifc columns of a model}
   gem.email = "lorgio.jimenez@gmail.com"
   gem.authors = ["Lorgio Jimenez"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
@@ -39,6 +39,8 @@ Rcov::RcovTask.new do |test|
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
 end
+
+task :test => :check_dependencies
 
 task :default => :test
 
